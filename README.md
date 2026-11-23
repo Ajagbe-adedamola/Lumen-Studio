@@ -1,6 +1,6 @@
 # Lumen Studio
 
-A photo editor that runs entirely in your browser. Lift a subject off its background, paint a watermark away, grade the light, then push the whole picture into a different look — mosaic, print texture, traced ink, or cut pieces clean away.
+A photo editor that runs entirely in your browser. Lift a subject off its background, paint a watermark away, grade the light, then push the whole picture into a different look  mosaic, print texture, traced ink, or cut pieces clean away.
 
 No install, no build step, no account, and no uploads: every pixel is processed on your own machine with the canvas API. There is no server and no AI model to download.
 
