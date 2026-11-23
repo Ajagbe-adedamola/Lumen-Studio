@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumen Studio — Cutout · Retouch · Vibe · Light &amp; Tone</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <div>
+        <h1>Lumen Studio</h1>
+        <p class="sub">Cutout · Retouch · Vibe · Light &amp; Tone</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button id="btnUndo" class="btn" type="button" disabled>Undo</button>
+      <button id="btnReset" class="btn" type="button" disabled>Reset</button>
+      <button id="btnCompare" class="btn" type="button" disabled>Compare</button>
+      <button id="btnOpen" class="btn btn-primary" type="button">Open image</button>
+      <input id="fileInput" type="file" accept="image/*" hidden />
+    </div>
+  </header>
+
+  <main class="workspace">
+    <nav class="rail" aria-label="Tools">
+      <button class="rail-btn is-active" type="button" data-tool="cut">
+        <span class="rail-ico" aria-hidden="true">◐</span>
+        <span>Cutout</span>
+      </button>
+      <button class="rail-btn" type="button" data-tool="retouch">
+        <span class="rail-ico" aria-hidden="true">✎</span>
+        <span>Retouch</span>
+      </button>
+      <button class="rail-btn" type="button" data-tool="vibe">
+        <span class="rail-ico" aria-hidden="true">✦</span>
+        <span>Vibe</span>
+      </button>
+      <button class="rail-btn" type="button" data-tool="fx">
+        <span class="rail-ico" aria-hidden="true">☀</span>
+        <span>Light</span>
+      </button>
+      <button class="rail-btn" type="button" data-tool="export">
+        <span class="rail-ico" aria-hidden="true">⤓</span>
+        <span>Export</span>
+      </button>
+    </nav>
+
+    <section class="stage" id="stage">
+      <div class="empty" id="emptyState">
+        <div class="empty-art" aria-hidden="true"></div>
+        <h2>Drop an image to begin</h2>
+        <p>PNG, JPG or WebP. Everything stays on your device — nothing uploads.</p>
+        <button class="btn btn-primary" type="button" id="btnEmptyOpen">Choose a file</button>
+      </div>
+      <canvas id="canvas" hidden></canvas>
+      <div class="brush-cursor" id="brushCursor" hidden></div>
+      <div class="stage-badge" id="stageBadge" hidden></div>
+    </section>
+
+    <aside class="panel">
+      <div class="panel-body" id="panelBody"></div>
+    </aside>
+  </main>
+
+  <footer class="statusbar">
+    <span id="statusText">No image loaded</span>
+    <span id="sizeText"></span>
+  </footer>
+
+  <script src="src/effects.js"></script>
+  <script src="src/tools.js"></script>
+  <script src="src/vibe.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
